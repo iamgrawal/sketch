@@ -26,6 +26,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
   }
+
+  .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+    background-color: inherit;
+    color: inherit;
+  }
+
+  .ant-menu-dark .ant-menu-item:hover {
+    color: inherit;
+  }
 `;
 
 export default GlobalStyle;
