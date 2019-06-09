@@ -3,6 +3,8 @@ const Types = {
   CHANGE_COLOR: 'CHANGE_COLOR',
   DECREASE_WEIGHT: 'DECREASE_WEIGHT',
   INCREASE_WEIGHT: 'INCREASE_WEIGHT',
+  MOUSE_DOWN: 'MOUSE_DOWN',
+  MOUSE_UP: 'MOUSE_UP',
 };
 
 const addPoint = point => ({
@@ -17,10 +19,22 @@ const changeColor = color => ({
 
 const decreaseWeight = () => ({
   type: Types.DECREASE_WEIGHT,
+  payload: null,
 });
 
 const increaseWeight = () => ({
   type: Types.INCREASE_WEIGHT,
+  payload: null,
+});
+
+const mouseDown = () => ({
+  type: Types.MOUSE_DOWN,
+  payload: null,
+});
+
+const mouseUp = () => ({
+  type: Types.MOUSE_UP,
+  payload: null,
 });
 
 export default {
@@ -28,5 +42,7 @@ export default {
   changeColor,
   decreaseWeight,
   increaseWeight,
+  mouseDown,
+  mouseUp,
   Types,
 };

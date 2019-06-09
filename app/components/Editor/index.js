@@ -11,9 +11,19 @@ const Canvas = styled.canvas`
 `;
 
 function Editor(props) {
+  const canvasRef = React.useRef(null);
   return (
     <Layout.Content style={{ padding: '0 20px' }}>
-      <Canvas onClick={props.editorOnClick}/>
+      <Canvas
+        ref={canvasRef}
+        width={window.innerWidth}
+        height={window.innerHeight}
+        onMouseMove={e => {
+          const canvas = canvasRef.current;
+          const ctx = canvas.getContext('2d');
+          props.editorOnClick(e, ctx);
+        }}
+      />
     </Layout.Content>
   );
 }
